@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="services.css"?>
+<locations>
+<locations id="l1" class="special">
+  <name>Ahemadabad</name>
+  <address>Bodakdev,Vastrapur</address>
+  <email>foodiessguj@gmail.com</email>
+  <contact>9969316545</contact>
+  </locations>
+  <locations id="l2">
+  <name>Mumbai</name>
+  <address>C.B.D Belapur,Navi Mumbai</address>
+  <email>foodiessmum@gmail.com</email>
+  <contact>9769229199</contact>
+  </locations>
+  <locations id="l3">
+  <name>Delhi</name>
+  <address>C.P Mall, Greater Noida</address>
+  <email>foodiessdel@gmail.com</email>
+  <contact>9969314555</contact>
+  </locations>
+  <locations id="l4">
+  <name>Chennai</name>
+  <address>Marimmal Nagar,Kolathur, Perambur</address>
+  <email>foodiesstn@gmail.com</email>
+  <contact>9969236545</contact>
+  </locations>
+ </locations>
+ 

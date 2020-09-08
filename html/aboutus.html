@@ -1,0 +1,105 @@
+<!DOCTYPE html> <!-- The new doctype -->
+
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>About Us</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <!-- Internet Explorer HTML5 enabling script: -->
+
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <style type="text/css">
+
+            .clear {
+                zoom: 1;
+                display: block;
+            }
+
+        </style>
+
+    <![endif]-->
+
+</head>
+<body>
+
+    <section id="page"> <!-- Defining the #page section with the section tag -->
+
+    <header> <!-- Defining the header section of the page with the appropriate tag -->
+
+        <h1>About Us</h1>
+
+    </header>
+ <!-- Article 1 start -->
+
+    <div class="line"></div>  <!-- Dividing line -->
+
+    <article id="article1"> <!-- The new article tag. The id is supplied so it can be scrolled into view. -->
+        <div class="line"></div>
+
+        <div class="articleBody clear">
+
+            <figure> <!-- The figure tag marks data (usually an image) that is part of the article -->
+                <a href="https://tutorialzine.com/2010/02/photo-shoot-css-jquery/">
+                    <img src="fooddelivery.jpeg" width="620" height="340" /></a>
+
+            </figure>
+           <p>"Foodiess is a food ordering and delivery company based out of Mumbai, India. Foodiess was inspired by the thought of providing a complete food ordering and delivery solution to the urban foodie. A single window for ordering from a wide range of menu, we have our own exclusive fleet of delivery personnel to pickup orders from restaurants and deliver it to customers . Having our own fleet gives us the flexibility to offer customers a no minimum order policy on our restaurant and accept online payments. Our delivery personnel carry one order at a time which ensures we get reliable and fast deliveries."</p>    
+        </div>
+    </article>
+
+    <!-- Article 1 end -->
+    
+    <footer> <!-- Marking the footer section -->
+    <script>
+    <script type="text/javascript">
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.open("GET","services.xml",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+
+document.getElementById("locations").innerHTML=
+xmlDoc.getElementsByTagName("locations")[0].childNodes[0].nodeValue;
+document.getElementById("name").innerHTML=
+xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+document.getElementById("address").innerHTML=
+xmlDoc.getElementsByTagName("address")[0].childNodes[0].nodeValue;
+document.getElementById("email").innerHTML=
+xmlDoc.getElementsByTagName("email")[0].childNodes[0].nodeValue;
+document.getElementById("contact").innerHTML=
+xmlDoc.getElementsByTagName("contact")[0].childNodes[0].nodeValue;
+</script>
+			<form >
+			<input TYPE="button" VALUE="View Our Services"
+        onclick="window.location.href='services.xml'">
+
+</form>
+            <div class="line"></div>
+
+            <p>Copyright 2018 - Foodiess.com</p> <!-- Change the copyright notice -->
+            
+
+        </footer>
+
+    </section> <!-- Closing the #page section -->
+
+    <!-- JavaScript Includes -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script src="jquery.scrollTo-1.4.2/jquery.scrollTo-min.js"></script>
+    <script src="script.js"></script>
+
+    </body>
+
+</html>

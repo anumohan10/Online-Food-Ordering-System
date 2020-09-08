@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Vegetarian Specials</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.7/jquery.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script>
+function showHint(str) {
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        }
+        xmlhttp.open("GET", "gethint.php?q="+str, true);
+        xmlhttp.send();
+    }
+}
+</script>
+
+<link href="storestyle.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        
+      <p><b>See available dishes:</b></p>
+        <form> 
+            What do you wanna eat?: <input type="text" onkeyup="showHint(this.value)">
+        </form>  
+        <p>available dishes: <span id="txtHint"></span></p>
+        
+        
+     <div class="container-fluid">
+            <div class="col-md-2"></div>
+            
+            <div class="col-md-8">
+                <div class="row">
+                    <h2 class="text-center">Veg Specials</h2>
+             
+                    <div class="col-md-3">
+                        <h4>Whole Wheat Pasta</h4>
+                        <img src="wp.jpg" alt="wp" class="img-thumb"/>
+                        <p class="price">Price: 110 Rs</p>
+                        <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-1">Details</button>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <h4>Coconut Curry</h4>
+                        <img src="cc.jpg" alt="cc" class="img-thumb"/>
+                        <p class="price">Price: 80 Rs</p>
+                        <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-2">Details</button>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <h4>Kadai Paneer</h4>
+                        <img src="kp.jpg" alt="kp" class="img-thumb"/>
+                        <p class="price">Price: 70 Rs</p>
+                        <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-3">Details</button>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <h4>Black Bean Tacos</h4>
+                        <img src="bbt.jpg" alt="bbt" class="img-thumb"/>
+                        <p class="price">Price: 110 Rs</p>
+                        <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-4">Details</button>
+                    </div>
+                    
+                      <div class="col-md-3">
+                        <h4>Farro Salad</h4>
+                        <img src="fs.jpg" alt="fs" class="img-thumb"/>
+                        <p class="price">Price: 60 Rs</p>
+                        <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-5">Details</button>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <h4>Veg Frankie Roll</h4>
+                        <img src="vf.jpg" alt="vf" class="img-thumb"/>
+                        <p class="price">Price: 80 Rs</p>
+                        <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-6">Details</button>
+                    </div>
+                                        
+                    <div class="col-md-3">
+                        <h4> Schezwan Rice</h4>
+                        <img src="sfr.jpg" alt="noodles" class="img-thumb"/>
+                        <p class="price">Price: 120 Rs</p>
+                        <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-7">Details</button>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <h4>Manchurian Dry</h4>
+                        <img src="vm.jpg" alt="vm" class="img-thumb"/>
+                        <p class="price">Price: 120 Rs</p>
+                        <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#details-8">Details</button>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="col-md-2"></div>
+            
+        </div>
+                 <div class="modal fade details-1" id="details-1" tabindex="-1" role="dialog" aria-labelledby="details-1" aria-hidden="true" data-backdrop="false">
+                   <div class="modal-dialog modal-lg">
+                       <div class="modal-content">
+                       <div class="modal-header">
+                           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                           </button>
+                           <h4 class="modal-title text-center">Whole Wheat Pasta</h4>
+                           
+                      </div>
+                       <div class="modal-body">
+                           <div class="container-fluid">
+                               <div class="row">
+                                   <div class="col-sm-6" >
+                                       <div class="center-block" >
+                                           <img src="wp.jpg" alt="wp" class="details img-responsive">
+                                       </div>
+                                       
+                                   </div>
+                                   <div class="col-sm-6" >
+                                       <h4>Details</h4>
+                                       <p>Foodies dayout offers Mouth watering and healthy Whole Wheat Pasta which can make your starters eating experience memorable.</p>
+                                       <hr>
+                                       <p>Price 110 rs</p>
+                                       <form>
+                                           <div class="form-group">
+                                               <div class="col-xs-3">
+                                                   <label for="quantity">Quantity:</label>
+                                                   <input type="text" class="form-control" id="quantity" name="quantity">
+                                               </div>
+                                           </div>
+                                       </form>
+                                   </div>   
+                                   
+                               </div>
+                           </div>
+                       </div>
+                       <div class="modal-footer">
+                           <button class="btn btn-default" data-dismiss="modal">Close</button>
+                           <button class="btn btn-warning" type="submit" onClick="window.location='login.html'"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</button>
+                       </div>
+                       </div>
+                   </div>
+               </div>
+               
+               
+               <div class="modal fade details-1" id="details-2" tabindex="-1" role="dialog" aria-labelledby="details-2" aria-hidden="true" data-backdrop="false">
+                   <div class="modal-dialog modal-lg">
+                       <div class="modal-content">
+                       <div class="modal-header">
+                           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                           </button>
+                           <h4 class="modal-title text-center">Coconut Curry</h4>
+                           
+                      </div>
+                       <div class="modal-body">
+                           <div class="container-fluid">
+                               <div class="row">
+                                   <div class="col-sm-6" >
+                                       <div class="center-block" >
+                                           <img src="cc.jpg" alt="cc" class="details img-responsive">
+                                       </div>
+                                       
+                                   </div>
+                                   <div class="col-sm-6" >
+                                       <h4>Details</h4>
+                                       <p>We all need to make time for a coconut curry once. Grab this delicious coconut curry before it sells out.</p>
+                                       <hr>
+                                       <p>Price 80 rs</p>
+                                       <form>
+                                           <div class="form-group">
+                                               <div class="col-xs-3">
+                                                   <label for="quantity">Quantity:</label>
+                                                   <input type="text" class="form-control" id="quantity" name="quantity">
+                                               </div>
+                                           </div>
+                                       </form>
+                                   </div>   
+                                   
+                               </div>
+                           </div>
+                       </div>
+                       <div class="modal-footer">
+                           <button class="btn btn-default" data-dismiss="modal">Close</button>
+                           <button class="btn btn-warning" type="submit" onClick="window.location='login.html'"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</button>
+                       </div>
+                       </div>
+                   </div>
+               </div>
+               
+               <div class="modal fade details-1" id="details-3" tabindex="-1" role="dialog" aria-labelledby="details-3" aria-hidden="true" data-backdrop="false">
+                   <div class="modal-dialog modal-lg">
+                       <div class="modal-content">
+                       <div class="modal-header">
+                           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                           </button>
+                           <h4 class="modal-title text-center">Kadai Paneer</h4>
+                           
+                      </div>
+                       <div class="modal-body">
+                           <div class="container-fluid">
+                               <div class="row">
+                                   <div class="col-sm-6" >
+                                       <div class="center-block" >
+                                           <img src="kp.jpg" alt="kp" class="details img-responsive">
+                                       </div>
+                                       
+                                   </div>
+                                   <div class="col-sm-6" >
+                                       <h4>Details</h4>
+                                       <p>Need a feast of flavours !! 
+                                       Grab this delicious and creamy Kadai Paneer at the best rates .</p>
+                                       <hr>
+                                       <p>Price 70 rs</p>
+                                       <form>
+                                           <div class="form-group">
+                                               <div class="col-xs-3">
+                                                   <label for="quantity">Quantity:</label>
+                                                   <input type="text" class="form-control" id="quantity" name="quantity">
+                                               </div>
+                                           </div>
+                                       </form>
+                                   </div>   
+                                   
+                               </div>
+                           </div>
+                       </div>
+                       <div class="modal-footer">
+                           <button class="btn btn-default" data-dismiss="modal">Close</button>
+                           <button class="btn btn-warning" type="submit" onClick="window.location='login.html'"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</button>
+                       </div>
+                       </div>
+                   </div>
+               </div>
+               
+               <div class="modal fade details-1" id="details-4" tabindex="-1" role="dialog" aria-labelledby="details-4" aria-hidden="true" data-backdrop="false">
+                   <div class="modal-dialog modal-lg">
+                       <div class="modal-content">
+                       <div class="modal-header">
+                           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                           </button>
+                           <h4 class="modal-title text-center">Black Bean Tacos</h4>
+                           
+                      </div>
+                       <div class="modal-body">
+                           <div class="container-fluid">
+                               <div class="row">
+                                   <div class="col-sm-6" >
+                                       <div class="center-block" >
+                                           <img src="bbt.jpg" alt="bbt" class="details img-responsive">
+                                       </div>
+                                       
+                                   </div>
+                                   <div class="col-sm-6" >
+                                       <h4>Details</h4>
+                                       <p>Celebrate & treat your taste buds to scrumptious and delectable Black Bean Tacos.</p>
+                                       <hr>
+                                       <p>Price 110 rs</p>
+                                       <form>
+                                           <div class="form-group">
+                                               <div class="col-xs-3">
+                                                   <label for="quantity">Quantity:</label>
+                                                   <input type="text" class="form-control" id="quantity" name="quantity">
+                                               </div>
+                                           </div>
+                                       </form>
+                                   </div>   
+                                   
+                               </div>
+                           </div>
+                       </div>
+                       <div class="modal-footer">
+                           <button class="btn btn-default" data-dismiss="modal">Close</button>
+                           <button class="btn btn-warning" type="submit" onClick="window.location='login.html'"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</button>
+                       </div>
+                       </div>
+                   </div>
+               </div>
+
+        <div class="modal fade details-1" id="details-5" tabindex="-1" role="dialog" aria-labelledby="details-5" aria-hidden="true" data-backdrop="false">
+                   <div class="modal-dialog modal-lg">
+                       <div class="modal-content">
+                       <div class="modal-header">
+                           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                           </button>
+                           <h4 class="modal-title text-center">Farro Salad</h4>
+                           
+                      </div>
+                       <div class="modal-body">
+                           <div class="container-fluid">
+                               <div class="row">
+                                   <div class="col-sm-6" >
+                                       <div class="center-block" >
+                                           <img src="fs.jpg"  alt="fs" class="details img-responsive">
+                                       </div>
+                                       
+                                   </div>
+                                   <div class="col-sm-6" >
+                                       <h4>Details</h4>
+                                       <p> Nothing beats a freshly made Farro Salad !</p>
+                                       <hr>
+                                       <p>Price 60 rs</p>
+                                       <form>
+                                           <div class="form-group">
+                                               <div class="col-xs-3">
+                                                   <label for="quantity">Quantity:</label>
+                                                   <input type="text" class="form-control" id="quantity" name="quantity">
+                                               </div>
+                                           </div>
+                                       </form>
+                                   </div>   
+                                   
+                               </div>
+                           </div>
+                       </div>
+                       <div class="modal-footer">
+                           <button class="btn btn-default" data-dismiss="modal">Close</button>
+                           <button class="btn btn-warning" type="submit" onClick="window.location='login.html'"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</button>
+                       </div>
+                       </div>
+                   </div>
+               </div>
+
+    <div class="modal fade details-1" id="details-6" tabindex="-1" role="dialog" aria-labelledby="details-6" aria-hidden="true" data-backdrop="false">
+                   <div class="modal-dialog modal-lg">
+                       <div class="modal-content">
+                       <div class="modal-header">
+                           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                           </button>
+                           <h4 class="modal-title text-center">Veg Frankie Roll</h4>
+                           
+                      </div>
+                       <div class="modal-body">
+                           <div class="container-fluid">
+                               <div class="row">
+                                   <div class="col-sm-6" >
+                                       <div class="center-block" >
+                                           <img src="vf.jpg"  alt="vf" class="details img-responsive">
+                                       </div>
+                                       
+                                   </div>
+                                   <div class="col-sm-6" >
+                                       <h4>Details</h4>
+                                       <p> You can hardly go a day without eating scrumptious Veg Frakie Roll dish !</p>
+                                       <hr>
+                                       <p>Price 80 rs</p>
+                                       <form>
+                                           <div class="form-group">
+                                               <div class="col-xs-3">
+                                                   <label for="quantity">Quantity:</label>
+                                                   <input type="text" class="form-control" id="quantity" name="quantity">
+                                               </div>
+                                           </div>
+                                       </form>
+                                   </div>   
+                                   
+                               </div>
+                           </div>
+                       </div>
+                       <div class="modal-footer">
+                           <button class="btn btn-default" data-dismiss="modal">Close</button>
+                           <button class="btn btn-warning" type="submit" onClick="window.location='login.html'"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</button>
+                       </div>
+                       </div>
+                   </div>
+               </div>
+      
+         <div class="modal fade details-1" id="details-7" tabindex="-1" role="dialog" aria-labelledby="details-7" aria-hidden="true" data-backdrop="false">
+                   <div class="modal-dialog modal-lg">
+                       <div class="modal-content">
+                       <div class="modal-header">
+                           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                           </button>
+                           <h4 class="modal-title text-center">Schezwan Rice</h4>
+                           
+                      </div>
+                       <div class="modal-body">
+                           <div class="container-fluid">
+                               <div class="row">
+                                   <div class="col-sm-6" >
+                                       <div class="center-block" >
+                                           <img src="sfr.jpg"  alt="sfr" class="details img-responsive">
+                                       </div>
+                                       
+                                   </div>
+                                   <div class="col-sm-6" >
+                                       <h4>Details</h4>
+                                       <p>All the dreamers in all the world are dizzy in the spicy Schezwan Rice !</p>
+                                       <hr>
+                                       <p>Price 120 rs</p>
+                                       <form>
+                                           <div class="form-group">
+                                               <div class="col-xs-3">
+                                                   <label for="quantity">Quantity:</label>
+                                                   <input type="text" class="form-control" id="quantity" name="quantity">
+                                               </div>
+                                           </div>
+                                       </form>
+                                   </div>   
+                                   
+                               </div>
+                           </div>
+                       </div>
+                       <div class="modal-footer">
+                           <button class="btn btn-default" data-dismiss="modal">Close</button>
+                           <button class="btn btn-warning" type="submit" onClick="window.location='login.html'"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</button>
+                       </div>
+                       </div>
+                   </div>
+               </div>         
+
+         <div class="modal fade details-1" id="details-8" tabindex="-1" role="dialog" aria-labelledby="details-8" aria-hidden="true" data-backdrop="false">
+                   <div class="modal-dialog modal-lg">
+                       <div class="modal-content">
+                       <div class="modal-header">
+                           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                           </button>
+                           <h4 class="modal-title text-center">Manchurian Dry</h4>
+                           
+                      </div>
+                       <div class="modal-body">
+                           <div class="container-fluid">
+                               <div class="row">
+                                   <div class="col-sm-6" >
+                                       <div class="center-block" >
+                                           <img src="vm.jpg"  alt="vm" class="details img-responsive">
+                                       </div>
+                                       
+                                   </div>
+                                   <div class="col-sm-6" >
+                                       <h4>Details</h4>
+                                       <p>Get your hands on the delicious and mouthwatering crispy Manchurian Dry now!</p>
+                                       <hr>
+                                       <p>Price 120 rs</p>
+                                       <form>
+                                           <div class="form-group">
+                                               <div class="col-xs-3">
+                                                   <label for="quantity">Quantity:</label>
+                                                   <input type="text" class="form-control" id="quantity" name="quantity">
+                                               </div>
+                                           </div>
+                                       </form>
+                                   </div>   
+                                   
+                               </div>
+                           </div>
+                       </div>
+                       <div class="modal-footer">
+                           <button class="btn btn-default" data-dismiss="modal">Close</button>
+                           <button class="btn btn-warning" type="submit" onClick="window.location='login.html'"><span class="glyphicon glyphicon-shopping-cart"></span>Add to cart</button>
+                       </div>
+                       </div>
+                   </div>
+               </div>         
+
+</body>
+</html>
