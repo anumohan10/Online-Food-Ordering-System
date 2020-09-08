@@ -19,3 +19,4 @@ Create an account.
 5) Review their current order. 
 6) Remove an item/remove all items from their current order. 
 
+This project is created by using HTML, CSS, PHP, Bootstrap, Ajax and XML.
