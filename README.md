@@ -1,4 +1,4 @@
-# Online-Food-Ordering-System
+# Online-Food-Ordering-System - FOODIES
 The online food ordering system provides convenience for the customers. It overcomes the disadvantages of the traditional queuing system. 
 This system increases the takeaway of foods than visitors. Therefore, this system enhances the speed and standardization of taking the order from the customer.
 
